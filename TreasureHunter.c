@@ -4,6 +4,14 @@ WORDSEARCHGAME();
 SUDOKUGAME();
 CRACKEDCODEGAME();
 */
+
+/* Authors of this game:
+Amaan Ansari : https://github.com/Amaaan09
+Harsh Singh : https://github.com/AarnoStormborn
+Ishan Dandekar : https://github.com/ishandandekar
+Shamsheer Rahiman : https://github.com/5ham5h33r
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
@@ -26,7 +34,7 @@ void printgameover()
             setColor(YELLOW);
             FILE *fp5;
             char line9[256];
-            fp5=fopen("gameover.txt","r");
+            fp5=fopen("textFiles/gameover.txt","r");
             printf("\n\n");
             for(int n=1; n<=12; n++)
             {
@@ -41,7 +49,7 @@ void printlevel1()
 {
             FILE *fp5;
             char line9[128];
-            fp5=fopen("level1.txt","r");
+            fp5=fopen("textFiles/level1.txt","r");
             for(int n=1; n<=12; n++)
             {
                 fgets(line9, 128, fp5);
@@ -53,7 +61,7 @@ void printlevel2()
 {
             FILE *fp5;
             char line9[128];
-            fp5=fopen("level2.txt","r");
+            fp5=fopen("textFiles/level2.txt","r");
             for(int n=1; n<=7; n++)
             {
                 Sleep(50);
@@ -66,7 +74,7 @@ void printlevel3()
 {
             FILE *fp5;
             char line9[128];
-            fp5=fopen("level3.txt","r");
+            fp5=fopen("textFiles/level3.txt","r");
             for(int n=1; n<=7; n++)
             {
                 fgets(line9, 128, fp5);
@@ -79,7 +87,7 @@ void safe()
 {
         char line9[128];
         FILE *fpsafe;
-        fpsafe=fopen("safe.txt","r");
+        fpsafe=fopen("textFiles/safe.txt","r");
         for(int n=1; n<=16; n++)
         {
             Sleep(50);
@@ -93,7 +101,7 @@ void printcred()
 {
         char line10[512];
         FILE *fpcred;
-        fpcred=fopen("credits.txt","r");
+        fpcred=fopen("textFiles/credits.txt","r");
         setColor(YELLOW);
         for(int n=1; n<=44; n++)
         {
@@ -106,8 +114,8 @@ void printcred()
 }
 struct test
 {
-    char naam[50]; //Shamsheer
-    int score; //1000
+    char naam[50];
+    int score;
 };
 
 void main()
@@ -119,7 +127,7 @@ void main()
     int minutes, seconds,datatime,row1=30, row2=20;
     setColor(GREEN);
     Sleep(2500);
-    FILE *fpointer=  fopen("castle.txt", "r" );
+    FILE *fpointer=  fopen("textFiles/castle.txt", "r" );
     for(int n=1; n<=39; n++)
     {
         Sleep(50);
@@ -129,7 +137,7 @@ void main()
     fclose(fpointer);
     Sleep(2500);
     setColor(WHITE);
-    FILE *fpointer2= fopen("welcome.txt", "r");
+    FILE *fpointer2= fopen("textFiles/welcome.txt", "r");
     for(int j=1; j<=11; j++)
     {
         Sleep(50);
@@ -143,7 +151,7 @@ void main()
     mainmen:
     printf("");
     char line4[512];
-    FILE *fpointer4= fopen("welcome.txt", "r");
+    FILE *fpointer4= fopen("textFiles/welcome.txt", "r");
     for(int j=1; j<=11; j++)
     {
         Sleep(50);
@@ -205,7 +213,7 @@ void main()
         getch();
         system("cls");
         setColor(BLUE);
-        FILE *fp2 = fopen("ship.txt", "r");
+        FILE *fp2 = fopen("textFiles/ship.txt", "r");
         char line6[128];
         for(int j=11; j<=41; j++)
         {
@@ -236,7 +244,7 @@ void main()
         system("cls");
 
         setColor(RED);
-        FILE *fp3 = fopen("demon.txt", "r");
+        FILE *fp3 = fopen("textFiles/demon.txt", "r");
         char line7[128];
         for(int j=1; j<=23; j++)
         {
@@ -271,7 +279,7 @@ void main()
         getch();
         system("cls");
         char line1[128];
-        fpointer=  fopen("castle.txt", "r" );
+        fpointer=  fopen("textFiles/castle.txt", "r" );
         setColor(GREEN);
         for(int n=1; n<=39; n++)
         {
@@ -295,7 +303,7 @@ void main()
         system("cls");
 
         char line8[128];
-        FILE *fp4=  fopen("sign.txt", "r" );
+        FILE *fp4=  fopen("textFiles/sign.txt", "r" );
         setColor(GREEN);
         gotoxy(1,row2-10);
         for(int n=1; n<=27; n++)
@@ -312,7 +320,7 @@ void main()
         system("cls");
 
         char line9[128];
-        FILE *fp5=  fopen("anorak.txt", "r" );
+        FILE *fp5=  fopen("textFiles/anorak.txt", "r" );
         setColor(MAGENTA);
         gotoxy(1, row2-15);
         for(int n=1; n<=21; n++)
@@ -489,7 +497,7 @@ void main()
         printf("\t\tUsername: ");
         scanf(" %50[^\n]", &name);
         FILE *fp;
-        fp=fopen("nameandscore.txt","a");
+        fp=fopen("textFiles/nameandscore.txt","a");
         fprintf(fp,"%s %d \n",name, seconds);
         fclose(fp);
         printf("\n\n\n\n\n\n\n\n\t\t\t(Press any key to continue) \n");
@@ -543,7 +551,7 @@ void main()
         int x,count=0, row=8;
 
         //Taking all file inputs in structure
-        fp=fopen("nameandscore.txt","r");
+        fp=fopen("textFiles/nameandscore.txt","r");
         for(int i=0;i<100;i++)
         {
             fscanf(fp,"%s %d",&s[i].naam,&s[i].score);
@@ -571,7 +579,7 @@ void main()
         }
 
         //printing leaderboard (Sorted structures)
-        FILE *fp1 = fopen("leaderboard.txt", "r");
+        FILE *fp1 = fopen("textFiles/leaderboard.txt", "r");
         for(int j=1; j<=4; j++)
         {
             Sleep(50);
@@ -631,7 +639,7 @@ void WORDSEARCHGAME()
     }
     char line3[128];
     printlevel2();
-    FILE *fpointer3= fopen("WORDSEARCHGAME.txt", "r");
+    FILE *fpointer3= fopen("textFiles/WORDSEARCHGAME.txt", "r");
     for(int m=1; m<=10; m++)
     {
         fgets(line3, 128, fpointer3);
