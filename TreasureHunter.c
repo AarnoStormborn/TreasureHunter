@@ -106,8 +106,8 @@ void printcred()
 }
 struct test
 {
-    char naam[50]; //Shamsheer
-    int score; //1000
+    char naam[50];
+    int score;
 };
 
 void main()
