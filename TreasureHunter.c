@@ -4,6 +4,14 @@ WORDSEARCHGAME();
 SUDOKUGAME();
 CRACKEDCODEGAME();
 */
+
+/* Authors of this game:
+Amaan Ansari : https://github.com/Amaaan09
+Harsh Singh : https://github.com/AarnoStormborn
+Ishan Dandekar : https://github.com/ishandandekar
+Shamsheer Rahiman : https://github.com/5ham5h33r
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
