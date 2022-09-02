@@ -30,7 +30,7 @@ The best part of this game is that you don't need any hardware objects, other th
 To play the game, clone the repository and run the `TreasureHunter.c` program. We know it is a tedious way, but we couldn't come up with any other solution.
 
 ```
-git clone <add repository url>
+git clone https://github.com/AarnoStormborn/TreasureHunter.git
 ```
 
 ## Contributions
@@ -39,4 +39,6 @@ Although, the development of this project has been stopped, we encourage people 
 
 ## Contributors
 
-> :warning: Add contributors image using https://contrib.rocks/preview site.
+<a href="https://github.com/AarnoStormborn/TreasureHunter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AarnoStormborn/TreasureHunter" />
+</a>
