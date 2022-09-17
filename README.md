@@ -24,7 +24,7 @@ The game was designed to attract speedrunning. The timer starts from the first m
 
 Complete these 4 mini-games and you have completed the game! The time at the end is recorded and saved in a `.txt` file as a record of all the players.
 
-## How to play the game
+## How to locally play the game 
 
 The best part of this game is that you don't need any hardware objects, other than obviosly a computer (can be a laptop or a PC).  
 To play the game, clone the repository and run the `TreasureHunter.c` program. We know it is a tedious way, but we couldn't come up with any other solution.
